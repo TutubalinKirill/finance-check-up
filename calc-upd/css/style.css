@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* Светло-голубой фон */
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+header {
+  background: #00796b;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  width: 40px;
+  height: 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.quote {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 30%;
+  text-align: right;
+}
+
+.quote-text {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.author {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 35%;
+}
+
+.content h2 {
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.content p {
+  margin-bottom: 15px;
+}
+
+.content a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content ol,
+.content ul {
+  margin-left: 20px;
+}
+
+.content ol li,
+.content ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #00796b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button a {
+  color: white;
+}
+
+.quote-image {
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  position: absolute;
+  top: 100%; /* Пример: текст будет располагаться над картинкой на 80% от высоты блока */
+  left: 45%; /* Пример: текст будет смещен влево на 5% от ширины блока */
+  transform: translateY(-50%);
+}
+

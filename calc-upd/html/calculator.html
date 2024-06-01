@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Финансовые данные</title>
+    <link rel="stylesheet" href="../css/calc-style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="./index.html" class="logo">
+          <img src="calculator-icon.jpeg" alt="Calculator Icon" />
+        </a>
+        <h1>Финансовый чек-ап</h1>
+      </div>
+    </header>
+
+    <div class="input-wrapper">
+      <div class="input-form">
+        <h2><u>Доходы</u></h2>
+        <p>
+          моя заработная плата:
+          <input type="text" id="mySalary" /> рублей в месяц
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Ваша среднемесечная зарплата за последнее время</span
+            >
+          </span>
+        </p>
+        <p>
+          заработная плата других членов семьи:
+          <input type="text" id="familySalary" /> рублей в месяц
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Общая среднемесячная зарплата других членов семьи
+              (мужа/жены/мамы/папы и т.д.) кроме вас за последнее время.</span
+            >
+          </span>
+        </p>
+        <p>
+          доходы от финансового капитала:
+          <input type="text" id="capitalIncome" /> рублей в месяц
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Денежный поток от различных вложений, получаемый «на руки».
+              Например, проценты от банковского вклада, дивиденды от
+              инвестиционного портфеля, рента от сдачи недвижимости в аренду и
+              т.д.</span
+            >
+          </span>
+        </p>
+        <p>
+          прочие ежемесячные доходы:
+          <input type="text" id="otherIncomeMonth" /> рублей в месяц
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Например, детские выплаты, получаемая пенсия, кэшбэк на
+              картах.</span
+            >
+          </span>
+        </p>
+        <p>
+          ежегодный бонус (подарки, выплаты):
+          <input type="text" id="bonuses" /> рублей в год
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Премия на работе, подарок на день рождения или другой праздник,
+              разовые выплаты от государства, налоговые вычеты</span
+            >
+          </span>
+        </p>
+        <p>
+          прочие годовые доходы:
+          <input type="text" id="otherIncomeYear" /> рублей в год
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Например, продажа вещей на авито, лотерея, разовые услуги
+              знакомым.</span
+            >
+          </span>
+        </p>
+
+        <h2><u>Расходы</u></h2>
+        <p>
+          регулярные расходы: <input type="text" id="regularExpenses" /> рублей
+          в месяц
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Ежемесячные расходы всех членов семьи.</span
+            >
+          </span>
+        </p>
+        <p>
+          платежи по кредитам/долгам:
+          <input type="text" id="creditPayments" /> рублей в месяц
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Ежемесячный суммарный платеж по всем кредитам/долгам семьи.</span
+            >
+          </span>
+        </p>
+        <p>
+          ежегодные расходы: <input type="text" id="otherExpenses" /> рублей в
+          год
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Среднегодовые расходы семьи на страхование автомобиля(ей), жизни,
+              имущества, на лечение любого члена семьи, на отпуск и отдых и
+              т.д.</span
+            >
+          </span>
+        </p>
+        <p>
+          прочие годовые расходы:
+          <input type="text" id="otherAnnualExpenses" /> рублей в год
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Например, налоговые отчисления, покупка одежды, обуви для семьи,
+              подарки, штрафы ГИБДД.</span
+            >
+          </span>
+        </p>
+
+        <h2><u>Пассивы</u></h2>
+        <p>
+          общий долг по ипотеке: <input type="text" id="mortgageDebt" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Сумма ипотечного кредита, которую вам осталось выплатить, или
+              ежемесячные платеж по ипотеке, умноженный на количество оставшихся
+              месяцев.</span
+            >
+          </span>
+        </p>
+        <p>
+          общий долг за авто: <input type="text" id="autoLoanDebt" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Сумма автокредита, которую вам осталось выплатить, или
+              ежемесячные платеж по автокредиту, умноженный на количество
+              оставшихся месяцев.</span
+            >
+          </span>
+        </p>
+        <p>
+          общий долг по потребительским кредитам:
+          <input type="text" id="consumerLoanDebt" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Сумма всех потребительских кредитов, которую вам осталось
+              выплатить, или ежемесячные платежи по потребительским кредитам,
+              умноженные на количество оставшихся месяцев.</span
+            >
+          </span>
+        </p>
+        <p>
+          прочие долги: <input type="text" id="otherDebts" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Например, долг другу/знакомому/работодателю.</span
+            >
+          </span>
+        </p>
+
+        <h2>
+          <u>Недоходные активы</u>
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Это имущество, которое принадлежит вам, используется в
+              повседневной жизни и не приносит доход. Например, квартира в
+              которой вы живете, личный автомобиль, дача, драгоценные украшения,
+              шуба.</span
+            >
+          </span>
+        </h2>
+        <p>
+          стоимость недвижемости:
+          <input type="text" id="propertyValue" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Это рыночная цена вашей недвижимости на сегодняшний день, можно
+              уточнить на сайте cian.ru</span
+            >
+          </span>
+        </p>
+        <p>
+          стоимость транспортного средства:
+          <input type="text" id="costOfTheVehicle" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Это рыночная цена вашего автомобиля и другого транспорта на
+              сегодняшний день, можно уточнить на сайте drom.ru.</span
+            >
+          </span>
+        </p>
+        <p>
+          стоимость предметов роскоши:
+          <input type="text" id="costOfLuxuryGoods" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Сумма всех цен ваших предметов роскоши, например, объекты
+              искусства, антиквариат, дорогие алкогольные напитки, ювелирные
+              изделия и т.д.</span
+            >
+          </span>
+        </p>
+        <p>
+          прочие недоходные активы:
+          <input type="text" id="otherNonIncomeAssets" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Например, наличные деньги в кошельке/сейфе/на карте без
+              процентов</span
+            >
+          </span>
+        </p>
+
+        <h2>
+          <u>Доходные активы</u>
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Это имущество вашей семьи, которое приносит доход. Например,
+              вклад в банке, инвестиционный портфель, бизнес, недвижимость или
+              автомобиль, которые сдаете в аренду, «подушка безопасности» и
+              т.д.</span
+            >
+          </span>
+        </h2>
+        <p>
+          банковский вклад: <input type="text" id="bankDeposit" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Общая сумма на счете вклада в банке(ах).</span
+            >
+          </span>
+        </p>
+        <p>
+          бизнес: <input type="text" id="business" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Это стоимость всего имущества и оборудования, если бизнес
+              капиталоемкий, и годовая выручка, если бизнес трудоемкий.</span
+            >
+          </span>
+        </p>
+        <p>
+          инвестиционный портфель:
+          <input type="text" id="investmentPortfolio" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Сумма стоимости всех ценных бумаг на текущий момент в рублях,
+              если их полностью продать и вывести денежные средства.</span
+            >
+          </span>
+        </p>
+        <p>
+          прочие доходные активы:
+          <input type="text" id="otherIncomeGeneratingAssets" /> рублей
+          <span class="tooltip-container">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+              >Например, «подушка безопасности», которую вы храните в доходных
+              инструментах, недвижимость или автомобиль, которые сдаете в
+              аренду, займ кому-либо под %.</span
+            >
+          </span>
+        </p>
+
+        <button id="calculateButton">Рассчитать</button>
+      </div>
+    </div>
+
+    <div class="tables-wrapper">
+      <div id="results-table" class="results-table">
+        <div class="first-table">
+          <h2>Результаты</h2>
+          <table>
+            <tr>
+              <th>Мои доходы в месяц, рублей</th>
+              <td id="monthlyIncome">0</td>
+            </tr>
+            <tr>
+              <th>Мои доходы в год, рублей</th>
+              <td id="annualIncome">0</td>
+            </tr>
+            <tr>
+              <th>Мои расходы в месяц, рублей</th>
+              <td id="monthlyExpenses">0</td>
+            </tr>
+            <tr>
+              <th>Мои расходы в год, рублей</th>
+              <td id="annualExpenses">0</td>
+            </tr>
+            <tr>
+              <th>Моя годовая прибыль, рублей</th>
+              <td id="annualProfit">0</td>
+            </tr>
+            <tr>
+              <th>Мои активы, рублей</th>
+              <td id="assets">0</td>
+            </tr>
+            <tr>
+              <th>Мои пассивы, рублей</th>
+              <td id="liabilities">0</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="second-table page-break">
+          <h2>Мои индикаторы</h2>
+          <table>
+            <tr>
+              <th rowspan="2">Прибыльность (рентабельность)</th>
+              <td></td>
+              <td style="background-color: rgb(252, 23, 23)">
+                Вы не окупаете сами себя
+              </td>
+              <td style="background-color: orange">Низкая рентабельность</td>
+              <td style="background-color: rgb(255, 255, 170)">
+                Средняя рентабельность
+              </td>
+              <td style="background-color: rgb(57, 255, 47)">
+                Высокая рентабельность
+              </td>
+              <td style="background-color: rgb(49, 141, 30)">Огонь!</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="profitability" style="font-weight: 700"></td>
+              <td>Ниже 0</td>
+              <td>0-10</td>
+              <td>10-20</td>
+              <td>20-40</td>
+              <td>20-40</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th rowspan="2">Долговая нагрузка</th>
+              <td></td>
+              <td style="background-color: rgb(49, 141, 30)">
+                Таких скоро не будет
+              </td>
+              <td style="background-color: rgb(57, 255, 47)">
+                Низкая нагрузка
+              </td>
+              <td style="background-color: rgb(255, 255, 170)">
+                Средняя нагрузка
+              </td>
+              <td style="background-color: rgb(255, 208, 199)">
+                Высокая Нагрузка
+              </td>
+              <td style="background-color: orange">Экстремальная нагрузка</td>
+              <td style="background-color: rgb(252, 23, 23)">Бремя</td>
+            </tr>
+            <tr>
+              <td id="debt_burden" style="font-weight: 700"></td>
+              <td>0-10</td>
+              <td>10-20</td>
+              <td>20-30</td>
+              <td>30-40</td>
+              <td>40-50</td>
+              <td>50-100</td>
+            </tr>
+
+            <tr>
+              <th rowspan="2">Активы (распределение богатства)</th>
+              <td></td>
+              <td style="background-color: rgb(252, 23, 23)">
+                Очень небогатые
+              </td>
+              <td style="background-color: orange">Средний класс</td>
+              <td style="background-color: rgb(255, 255, 170)">
+                "Высший" средний класс
+              </td>
+              <td style="background-color: rgb(57, 255, 47)">Богатые</td>
+              <td style="background-color: rgb(49, 141, 30)">Сверхбогатые</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="wealthDistribution" style="font-weight: 700"></td>
+              <td>0-800000</td>
+              <td>800000-8000000</td>
+              <td>8000000-35000000</td>
+              <td>35000000-100000000</td>
+              <td>более 100000000</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th rowspan="2">
+                Коэффициент независимости (от активного дохода)
+              </th>
+
+              <td></td>
+              <td style="background-color: rgb(252, 23, 23)">
+                Полностью зависимые
+              </td>
+              <td style="background-color: rgb(255, 208, 199)">
+                Частично независимые
+              </td>
+              <td style="background-color: orange">
+                Средняя степень независимости
+              </td>
+              <td style="background-color: rgb(255, 255, 170)">
+                Высокая степень независимости
+              </td>
+              <td style="background-color: rgb(57, 255, 47)">
+                Финансовая независимость
+              </td>
+              <td style="background-color: rgb(49, 141, 30)">
+                Финансовая свобода
+              </td>
+            </tr>
+            <tr>
+              <td id="independent-coef" style="font-weight: 700"></td>
+              <td>0-10</td>
+              <td>10-25</td>
+              <td>25-45</td>
+              <td>45-80</td>
+              <td>80-200</td>
+              <td>более 200</td>
+            </tr>
+          </table>
+          <button id="returnButton">Назад</button>
+          <button id="exportPDFButton">Выгрузить в PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Финансовый чек-ап. Все права защищены.</p>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="../js/calculator.js"></script>
+  </body>
+</html>

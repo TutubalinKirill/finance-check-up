@@ -1,0 +1,262 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+.input-form {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+h2 {
+  color: #333;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background: #00796b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+header {
+  background: #00796b;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+
+header .logo img {
+  width: 40px;
+  height: 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #00796b;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header .logo img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input-wrapper,
+.tables-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-form h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+.input-form p {
+  margin-bottom: 15px;
+}
+
+.input-form input[type="text"] {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-form button {
+  padding: 10px 20px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-form button:hover {
+  background-color: #45a049;
+}
+
+.tables-wrapper {
+  display: none;
+}
+
+.results-table {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.results-table th {
+  background-color: #00796b;
+  color: white;
+}
+
+.results-table tr {
+  border: 2px solid black;
+}
+
+.results-table td {
+  background-color: #f2f2f2;
+}
+
+.first-table {
+  width: 40%;
+  align-self: center;
+}
+
+footer {
+  background: #00796b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.second-table {
+  padding: 15px;
+}
+
+#returnButton {
+  margin-top: 15px;
+}
+
+/* Контейнер для подсказки */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Иконка вопроса */
+.tooltip-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Текст подсказки */
+.tooltip-text {
+  visibility: hidden;
+  width: 200px; /* Ширина подсказки */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Позиционирование над элементом */
+  left: 50%;
+  margin-left: -100px; /* Сдвиг для центрирования */
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Показывать текст при наведении */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.page-break {
+  page-break-before: always;
+}
